@@ -1,9 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const User = require("../models/userModel");
-const { body, validationResult } = require('express-validator');
-
-
 
 
 router.post("/register", async (req, res) => {
