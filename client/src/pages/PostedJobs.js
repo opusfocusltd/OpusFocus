@@ -30,11 +30,11 @@ function PostedJobs({match}) {
     {
       title: "Title",
       dataIndex: "title",
-      responsive: ['md']
     },
     {
       title: "Company",
       dataIndex: "company",
+      responsive: ['md']
     },
     {
       title: "Posted On",
