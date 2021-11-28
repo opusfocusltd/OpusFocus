@@ -20,6 +20,7 @@ import Filter from './Filter';
 
 const { Header, Sider, Content } = Layout;
 
+
 class DefaultLayout extends React.Component {
   
   constructor(props){
@@ -43,13 +44,14 @@ class DefaultLayout extends React.Component {
   render() {
     const user = JSON.parse(localStorage.getItem('user'))
     console.log(user)
+    const w = window.innerWidth;
     return (
       <Layout>
-        <Sider trigger={null} collapsible collapsed={this.state.collapsed}
+        <Sider trigger={null} breakpoint='sm' collapsedWidth='70'
          style={{position: 'sticky' , overflow : 'auto' , height:'100vh' , top:0}}
         >
           <div className="logo">
-              {this.state.collapsed ? (<h1>OF</h1>) : (<h1>Opus Focus</h1>)}
+              {w<578 ? (<h1>OF</h1>) : (<h1>Opus Focus</h1>)}
           </div>
           <Menu theme="dark" mode="inline" defaultSelectedKeys={[window.location.pathname]}>
             <Menu.Item key="/" icon={<HomeOutlined />}>
@@ -91,7 +93,7 @@ class DefaultLayout extends React.Component {
                 <Filter/>
              </div>
 
-             <div style={{display : this.state.collapsed ? 'none' : 'inline'}}>
+             <div style={{display : w<578 ? 'none' : 'inline'}}>
                   <h5 className="mr-2"><FontAwesomeIcon icon={faUserCircle} /><b className="gg">{user.username}</b></h5>
              </div>
 
