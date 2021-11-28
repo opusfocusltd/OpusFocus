@@ -27,21 +27,34 @@ function UserInfo({ match }) {
 
   const gen = async () =>{
     const input = document.getElementById('toprint');
-    html2canvas(input)
-      .then((canvas) => {
-        const imgData = canvas.toDataURL('image/png');
-        const pdf = new jsPDF();
-        pdf.addImage(imgData, 'JPEG', 0, 0);
-       
-        pdf.save("Resume.pdf");
-      })
+    window.scrollTo(0, 0); 
+    html2canvas(input, {
+      scrollX: -window.scrollX,
+      scrollY: -window.scrollY,
+      windowWidth: document.documentElement.offsetWidth,
+      windowHeight: input.scrollHeight,
+    }).then((canvas) => {
+      const img = new Image();
+
+      const imgData = canvas
+        .toDataURL("image/png")
+        .replace("image/png", "image/octet-stream");
+
+      const pdf = new jsPDF("p", "mm", "a0");
+      const imgProps = pdf.getImageProperties(imgData);
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+      pdf.addImage(imgData, "JPEG", 0, 0, pdfWidth, pdfHeight);
+      pdf.save("Resume.pdf");
+    });
   }
 
   return (
     <div>
       <DefaultLayout>
         {user && (
-          <div id="toprint">
+          <div>
+            <div id="toprint">
             <h3>
               <b>Personal inforamtion</b>
             </h3>
@@ -97,6 +110,7 @@ function UserInfo({ match }) {
             })}
 
             <hr/> 
+            </div>
             <div>
               <Link to='/confirm'><button className="mail-btn1"  onClick={handle}>Select Candidate</button></Link>
               <button className="mail-btn2" onClick={gen}>Download Resume</button>
