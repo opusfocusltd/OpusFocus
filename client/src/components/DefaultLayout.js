@@ -106,6 +106,7 @@ class DefaultLayout extends React.Component {
               margin: '24px 16px',
               padding: 24,
               minHeight: 280,
+              overflowX:'hidden'
             }}
           >
             {this.props.children}

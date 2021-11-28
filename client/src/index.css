@@ -254,9 +254,9 @@ input , textarea{
     font-weight: bold;
     font-size: 1.2rem;
   }
-  body,html{
+  /* body,html{
     overflow-x: hidden !important;
-  }
+  } */
   .html2canvas-container { width: 1500px !important; height: 1500px !important; }
   .mail-btn1{
     margin-top: 10px;

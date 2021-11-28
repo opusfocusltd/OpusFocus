@@ -20,7 +20,13 @@ const HeroSection = () => {
           <HeroH1>Job Finding Made Easy</HeroH1>
           <HeroP>With opus focus you can easily post and apply for jobs hassle-free so what are you waiting for? Join us today!</HeroP>
           <HeroBtn>
-              <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true'>
+              <Button to='signup' 
+               spy={true}
+               smooth={true}
+               offset={-80}
+               duration={500}
+               exact='true'
+              onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true'>
                   Get started {hover? <ArrowForward /> : <ArrowRight />}
               </Button>
           </HeroBtn>
