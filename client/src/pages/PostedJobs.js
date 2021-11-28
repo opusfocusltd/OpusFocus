@@ -30,6 +30,7 @@ function PostedJobs({match}) {
     {
       title: "Title",
       dataIndex: "title",
+      responsive: ['md']
     },
     {
       title: "Company",
@@ -38,10 +39,12 @@ function PostedJobs({match}) {
     {
       title: "Posted On",
       dataIndex: "postedOn",
+      responsive: ['sm']
     },
     {
       title: "Applied Candidates",
       dataIndex: "appliedCandidates",
+      responsive: ['sm']
     },
     {
       title: "Actions",
@@ -107,8 +110,9 @@ function PostedJobs({match}) {
     {
       title: "Full Name",
       dataIndex: "fullName",
+      responsive: ['sm']
     },
-    { title: "Applied Date", dataIndex: "appliedDate" },
+    { title: "Applied Date", dataIndex: "appliedDate",responsive: ['sm'] },
   ];
 
   var candidatesDatasource = [];
@@ -149,6 +153,7 @@ function PostedJobs({match}) {
           onOk={handleOk}
           onCancel={handleCancel}
           width={800}
+          style={{overflowX:'hidden'}}
         >
           <CandidatesList/>
         </Modal>
