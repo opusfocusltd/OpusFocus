@@ -253,4 +253,8 @@ input , textarea{
     font-weight: bold;
     font-size: 1.2rem;
   }
+  body,html{
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+  }
 }
