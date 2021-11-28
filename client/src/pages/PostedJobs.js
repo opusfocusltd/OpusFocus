@@ -138,7 +138,7 @@ function PostedJobs({match}) {
   return (
     <div>
       <DefaultLayout>
-        <h1>Posted Jobs</h1>
+        <h1 id='posj'>Posted Jobs</h1>
 
         <Table columns={columns} dataSource={dataSource} />
 

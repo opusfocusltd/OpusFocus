@@ -46,7 +46,7 @@ class DefaultLayout extends React.Component {
     return (
       <Layout>
         <Sider trigger={null} collapsible collapsed={this.state.collapsed}
-         style={{position: 'sticky' , overflow : 'auto' , height:'100%' , top:0}}
+         style={{position: 'sticky' , overflow : 'auto' , height:'100vh' , top:0}}
         >
           <div className="logo">
               {this.state.collapsed ? (<h1>OF</h1>) : (<h1>Opus Focus</h1>)}

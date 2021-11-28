@@ -50,7 +50,7 @@ function AppliedJobs() {
     return (
         <div>
             <DefaultLayout>
-                   <h1>AppliedJobs</h1>
+                   <h1 id='posj'>AppliedJobs</h1>
                    <Table columns={columns} dataSource={userAppliedJobs}/>
             </DefaultLayout>
         </div>
