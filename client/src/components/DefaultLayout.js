@@ -82,7 +82,7 @@ class DefaultLayout extends React.Component {
            
            <div className="flex justify-content-between">
 
-             <div className='trigger'>
+             <div>
              {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
               className: 'trigger',
               onClick: this.toggle,
