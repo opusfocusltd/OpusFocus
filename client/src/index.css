@@ -257,9 +257,5 @@ input , textarea{
   body,html{
     overflow-x: hidden !important;
   }
-<<<<<<< HEAD
   .html2canvas-container { width: 1500px !important; height: 1500px !important; }
 }
-=======
-}
->>>>>>> cdfa9c9e4b2eac934dc78a177246a2510b78197a
