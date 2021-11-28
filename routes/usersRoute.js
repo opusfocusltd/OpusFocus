@@ -5,9 +5,16 @@ const User = require("../models/userModel");
 
 router.post("/register", async (req, res) => {
   try {
-    const newuser = new User(req.body);
-    const user = await newuser.save();
-    res.send("User Created Successfully");
+    const present = await User.findOne({
+      username: req.body.username,
+    });
+    if(present){
+    return res.status(400).json({ message: "invalid credentials" });
+    }else{
+      const newuser = new User(req.body);
+      const user = await newuser.save();
+      res.send("User Created Successfully");
+    }
   } catch (error) {
     return res.status(400).json(error);
   }
