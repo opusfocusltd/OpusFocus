@@ -93,7 +93,7 @@ class DefaultLayout extends React.Component {
                 <Filter/>
              </div>
 
-             <div style={{display : w<578 || this.state.collapsed===false ? 'none' : 'inline'}}>
+             <div style={{display : w<578 || this.state.collapsed ? 'none' : 'inline'}}>
                   <h5 className="mr-2"><FontAwesomeIcon icon={faUserCircle} /><b className="gg">{user.username}</b></h5>
              </div>
 
