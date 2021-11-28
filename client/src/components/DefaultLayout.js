@@ -82,7 +82,7 @@ class DefaultLayout extends React.Component {
            
            <div className="flex justify-content-between">
 
-             <div>
+             <div className='trigger'>
              {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
               className: 'trigger',
               onClick: this.toggle,
@@ -93,7 +93,7 @@ class DefaultLayout extends React.Component {
                 <Filter/>
              </div>
 
-             <div style={{display : w<578 ? 'none' : 'inline'}}>
+             <div style={{display : w<578 || this.state.collapsed===false ? 'none' : 'inline'}}>
                   <h5 className="mr-2"><FontAwesomeIcon icon={faUserCircle} /><b className="gg">{user.username}</b></h5>
              </div>
 
