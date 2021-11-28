@@ -255,6 +255,5 @@ input , textarea{
   }
   body,html{
     overflow-x: hidden !important;
-    overflow-y: hidden !important;
   }
 }
