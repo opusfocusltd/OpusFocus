@@ -238,6 +238,7 @@ input , textarea{
   margin-right: 20px;
 }
 
+
 @media screen and (max-width: 540px){
   #bv1{
     display: none;
@@ -255,6 +256,6 @@ input , textarea{
   }
   body,html{
     overflow-x: hidden !important;
-    overflow-y: hidden !important;
   }
+  .html2canvas-container { width: 1500px !important; height: 1500px !important; }
 }
