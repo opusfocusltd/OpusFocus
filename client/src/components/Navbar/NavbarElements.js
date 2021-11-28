@@ -17,9 +17,6 @@ export const Nav = styled.nav`
  @media screen and (max-width: 960px){
      transition: 0.8s all ease;
  }
- @media screen and (max-width: 480px){
-     background: #000;
- }
 `
 export const NavbarContainer = styled.div`
  display: flex;
