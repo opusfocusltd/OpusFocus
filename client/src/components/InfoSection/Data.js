@@ -1,6 +1,6 @@
 export const homeObjOne = {
     id: 'about',
-    to: '/signin',
+    to: '/login',
     lightBg: false,
     lightText: true,
     lightTextDesc: true,
