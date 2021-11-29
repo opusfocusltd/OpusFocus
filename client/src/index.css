@@ -276,4 +276,9 @@ input , textarea{
     padding-bottom: 5px;
     font-size: small;
   }
+  .ant-layout-sider{
+    width: 70px !important;
+    max-width: 70px !important;
+    min-width: 70px !important;
+  }
 }

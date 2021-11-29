@@ -55,25 +55,27 @@ class DefaultLayout extends React.Component {
           </div>
           <Menu theme="dark" mode="inline" defaultSelectedKeys={[window.location.pathname]}>
             <Menu.Item key="/" icon={<HomeOutlined />}>
-              <Link to='/'>Home</Link>
+              <Link to='/' style={{display: w<478 ? 'none':'inline'}}>Home</Link>
             </Menu.Item>
             <Menu.Item key="/profile" icon={<UserOutlined />}>
-            <Link to='/profile'>Profile</Link>
+            <Link to='/profile' style={{display: w<478 ? 'none':'inline'}}>Profile</Link>
             </Menu.Item>
             <Menu.Item key="/appliedjobs" icon={<PlusSquareOutlined />}>
-            <Link to='/appliedjobs'>Applied Jobs</Link>
+            <Link to='/appliedjobs' style={{display: w<478 ? 'none':'inline'}}>Applied Jobs</Link>
             </Menu.Item>
 
             <Menu.Item key="/postjob" icon={<PlusOutlined />}>
-            <Link to='/postjob'>Post Job</Link>
+            <Link to='/postjob' style={{display: w<478 ? 'none':'inline'}}>Post Job</Link>
             </Menu.Item>
 
             <Menu.Item key="/posted" icon={<CheckOutlined />}>
-            <Link to='/posted'>Posted</Link>
+            <Link to='/posted' style={{display: w<478 ? 'none':'inline'}}>Posted</Link>
             </Menu.Item>
 
-            <Menu.Item key="/logout" icon={<LogoutOutlined />}>
-            <Link onClick={this.logout}>Logout</Link>
+            <Menu.Item key="/logout" icon={<LogoutOutlined />} onClick={this.logout}>
+            <Link style={{display: w<478 ? 'none':'inline'}} >
+              Logout
+            </Link>
             </Menu.Item>
           </Menu>
         </Sider>
