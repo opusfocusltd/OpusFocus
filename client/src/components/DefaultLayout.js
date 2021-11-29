@@ -73,8 +73,8 @@ class DefaultLayout extends React.Component {
             </Menu.Item>
 
             <Menu.Item key="/logout" icon={<LogoutOutlined />} onClick={this.logout}>
-            <Link style={{display: w<478 ? 'none':'inline'}} >
-              Logout
+            <Link>
+              <p style={{display: w<478 ? 'none':'inline',marginTop:'15px'}} >Logout</p>
             </Link>
             </Menu.Item>
           </Menu>
