@@ -55,21 +55,21 @@ class DefaultLayout extends React.Component {
           </div>
           <Menu theme="dark" mode="inline" defaultSelectedKeys={[window.location.pathname]}>
             <Menu.Item key="/" icon={<HomeOutlined />}>
-              <Link to='/' style={{display: w<478 ? 'none':'inline'}}>Home</Link>
+              <Link to='/'><p style={{display: w<478 ? 'none':'inline',marginTop:'15px'}}>Home</p></Link>
             </Menu.Item>
             <Menu.Item key="/profile" icon={<UserOutlined />}>
-            <Link to='/profile' style={{display: w<478 ? 'none':'inline'}}>Profile</Link>
+            <Link to='/profile'><p style={{display: w<478 ? 'none':'inline',marginTop:'15px'}}>Profile</p></Link>
             </Menu.Item>
             <Menu.Item key="/appliedjobs" icon={<PlusSquareOutlined />}>
-            <Link to='/appliedjobs' style={{display: w<478 ? 'none':'inline'}}>Applied Jobs</Link>
+            <Link to='/appliedjobs'><p style={{display: w<478 ? 'none':'inline',marginTop:'15px'}}>Applied Jobs</p></Link>
             </Menu.Item>
 
             <Menu.Item key="/postjob" icon={<PlusOutlined />}>
-            <Link to='/postjob' style={{display: w<478 ? 'none':'inline'}}>Post Job</Link>
+            <Link to='/postjob'><p style={{display: w<478 ? 'none':'inline',marginTop:'15px'}}>Post Job</p></Link>
             </Menu.Item>
 
             <Menu.Item key="/posted" icon={<CheckOutlined />}>
-            <Link to='/posted' style={{display: w<478 ? 'none':'inline'}}>Posted</Link>
+            <Link to='/posted' ><p style={{display: w<478 ? 'none':'inline',marginTop:'15px'}}>Posted</p></Link>
             </Menu.Item>
 
             <Menu.Item key="/logout" icon={<LogoutOutlined />} onClick={this.logout}>
