@@ -101,4 +101,9 @@ export const Img = styled.img`
 export const BLink = styled(Link)`
  text-decoration: none;
  color: ${({dark}) => (dark ? '#010606' : '#fff')};
+
+ &:hover{
+     text-decoration: none;
+     color: ${({dark}) => (dark ? '#010606' : '#fff')};
+ }
 `
