@@ -34,7 +34,7 @@ function Profile() {
           <TabPane tab="Personal Info" key="1">
             <Form layout="vertical" onFinish={onPersonInfoSubmit} initialValues={user}>
               <Row gutter={16}>
-                <Col lg={8} sm={24}>
+                <Col lg={8} sm={24}> 
                   <Form.Item
                     label="First name"
                     required
@@ -58,17 +58,34 @@ function Profile() {
                   <Form.Item
                     label="Email"
                     required
-                    rules={[{ required: true }]}
+                    rules={[
+                      {
+                        type:'email',
+                        message:'Please enter a valid email'
+                      },
+                      {
+                        required:true,
+                        message:"Please enter your email"
+                      }
+                    ]}
                     name="email"
                   >
-                    <Input />
+                    <Input type='email' />
                   </Form.Item>
                 </Col>
                 <Col lg={8} sm={24}>
                   <Form.Item
                     label="Mobile Number"
                     required
-                    rules={[{ required: true }]}
+                    rules={[
+                      {
+                        len:10,
+                        message: 'Please enter a valid phone number'
+                      },
+                      {
+                        required:true
+                      }
+                    ]}
                     name="mobileNumber"
                   >
                     <Input />
