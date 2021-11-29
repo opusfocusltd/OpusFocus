@@ -32,7 +32,7 @@ function Home() {
 
                    <div className="flex justify-content-between">
                        <Link to={`/jobs/${job._id}`}><Button>Apply</Button></Link>
-                       <p>Posted on : {moment(job.createdAt).format('MMM DD yyyy')}</p>
+                       <p className='podate'><b>Posted on</b> : {moment(job.createdAt).format('MMM DD yyyy')}</p>
                    </div>
                   
                 </div>

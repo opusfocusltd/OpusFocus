@@ -281,4 +281,14 @@ input , textarea{
     max-width: 70px !important;
     min-width: 70px !important;
   }
+  .podate{
+    font-size: smaller;
+  }
+  .edixnow{
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .denow{
+    margin-top: 7px;
+  }
 }

@@ -83,14 +83,14 @@ function JobInfo({ match }) {
               {job.postedBy == userid ? (
                 <><div>
                 <Button className='ednow'>
-                  <Link to={`/editjob/${job._id}`}>Edit Now</Link>
-                </Button><Button onClick={del}><Link to='/'>Delete Job</Link></Button></div></>
+                  <Link to={`/editjob/${job._id}`} className='edixnow'>Edit Now</Link>
+                </Button><Button onClick={del} className='denow'><Link to='/'>Delete Job</Link></Button></div></>
               ) : alreadyApplied ? (
                 <Tag color="green">Already Applied</Tag>
               ) : (
                 <Button onClick={applyNow}>Apply Now</Button>
               )}
-              <p>
+              <p className='podate'>
                 <b>Posted on</b> {moment(job.createdAt).format("MMM DD yyyy")}
               </p>
             </div>
