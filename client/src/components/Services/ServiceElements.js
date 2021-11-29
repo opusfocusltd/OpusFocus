@@ -7,6 +7,7 @@ export const ServicesContainer = styled.div`
  justify-content: center;
  align-items: center;
  background: #010606;
+ font-family: 'Encode Sans Expanded', sans-serif;
 
  @media screen and (max-width: 768px){
      height: 1100px;
