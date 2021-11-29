@@ -238,6 +238,25 @@ input , textarea{
   margin-right: 20px;
 }
 
+@media screen and (max-width: 400px){
+  #mes1{
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  #mes2{
+    margin-left: 5px;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  #mes3{
+    margin-left: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .mail-btn2{
+    margin-left: 1px;
+  }
+}
 
 @media screen and (max-width: 540px){
   #bv1{
@@ -270,7 +289,6 @@ input , textarea{
   }
   .mail-btn2{
     margin-top: 7px;
-    margin-left: 5px;
     padding-left: 7px;
     padding-right: 7px;
     padding-top: 5px;
@@ -293,3 +311,5 @@ input , textarea{
     margin-top: 7px;
   }
 }
+
+

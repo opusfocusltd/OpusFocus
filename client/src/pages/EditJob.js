@@ -201,9 +201,9 @@ function EditJob({match}) {
                   </Col>
               
               </Row>
-              <Button onClick={()=>{setActiveTab("0")}}>Previous</Button>
-              <Button style={{marginLeft:5}} htmlType="submit">Edit Job</Button>
-              <Button style={{marginLeft:5}} onClick={del} ><Link to='/'>Delete Job</Link></Button>
+              <Button onClick={()=>{setActiveTab("0")}} id='mes1'>Previous</Button>
+              <Button style={{marginLeft:5}} htmlType="submit" id='mes2'>Edit Job</Button>
+              <Button style={{marginLeft:5}} onClick={del} id='mes3'><Link to='/'>Delete Job</Link></Button>
             </Form>
           </TabPane>
         </Tabs>
