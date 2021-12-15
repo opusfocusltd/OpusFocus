@@ -43,7 +43,7 @@ function Filter() {
 
       <Modal title="Select filters" footer={false} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} closable={false}>
           <Form layout='vertical' onFinish={sort}>
-                <Form.Item name='experience' label='Experipence'>
+                <Form.Item name='experience' label='Experience'> 
 
                     <Select>
                         <Option value={0}>Fresher</Option>
