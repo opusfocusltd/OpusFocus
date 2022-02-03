@@ -1,3 +1,3 @@
 # OpusFocus
-Creators - Nipun Mitra 
+Creators - Nipun Mitra, 
            Piyush Bhardwaj 
