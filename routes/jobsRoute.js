@@ -19,6 +19,7 @@ router.get("/getalljobs", async(req, res) => {
 
 });
 
+// post job
 
 router.post("/postjob", async(req, res) => {
 
