@@ -1,9 +1,13 @@
 const express = require("express");
 const router = express.Router();
 const User = require("../models/userModel");
+const bcrypt = require('bcrypt')
 
 
 router.post("/register", async (req, res) => {
+  const salt = await bcrypt.genSalt(10);
+  const hashedPass = await bcrypt.hash(req.body.password, salt);
+  req.body.password = hashedPass
   try {
     const present = await User.findOne({
       username: req.body.username,
@@ -23,18 +27,23 @@ router.post("/register", async (req, res) => {
 
 
 router.post("/login", async (req, res) => {
+  const {username,password} = req.body
   try {
     const user = await User.findOne({
-      username: req.body.username,
-      password: req.body.password,
+      username: username
     });
+    const validity = await bcrypt.compare(password, user.password);
+    if (!validity) {
+     return res.status(400).json("wrong password");
+    }
     if (user) {
-      res.send(user);
+      const { password, ...other } = user._doc;
+      res.send(other);
     } else {
       return res.status(400).json({ message: "invalid credentials" });
     }
   } catch (error) {
-    return res.status(400).json(error);
+    return res.status(500).json(error);
   }
 });
 
