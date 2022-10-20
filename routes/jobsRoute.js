@@ -6,7 +6,7 @@ const Job = require("../models/jobModel")
 const User = require("../models/userModel")
 const moment = require("moment");
 
-
+// get all jobs
 
 router.get("/getalljobs", async(req, res) => {
   
